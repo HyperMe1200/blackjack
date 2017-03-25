@@ -1,0 +1,1 @@
+# blackjack thinnetica ruby learning
