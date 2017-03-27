@@ -38,8 +38,6 @@ class Game
       add_card(@user)
       show_user_hand(@user)
       bot_turn
-    elsif @user.cards.size == max_cards && @bot.cards.size == max_cards
-      end_game
     else
       puts 'У вас уже максимальное кол-во карт'
       user_input
@@ -94,10 +92,8 @@ class Game
     if points(@bot.cards) < 17 && @bot.cards.size < max_cards
       add_card(@bot)
       puts 'Компьютер взял карту'
+      end_game if max_cards?
       user_turn
-    elsif max_cards?
-      puts 'У игроков максимальное количество карт'
-      end_game
     else
       puts 'Компьютер пропускает ход'
       user_turn
