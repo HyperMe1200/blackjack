@@ -63,11 +63,9 @@ class Game
     puts "У вас в банке #{@user.cash} денег"
     printf 'Продолжаем играть? у/n:'
     input = gets.chomp
-    if input == 'y'
-      start_game
-    elsif input == 'n'
-      puts 'Игра завершена!'
-      exit!
+    case input
+    when 'y' then start_game
+    when 'n' then exit!
     else
       puts 'Неправильный ввод'
       menu_end_game
@@ -91,6 +89,8 @@ class Game
   def overscored?(score)
     score > win_points
   end
+
+
 
   def bot_turn
     if points(@bot.cards) < 17 && @bot.cards.size < max_cards
