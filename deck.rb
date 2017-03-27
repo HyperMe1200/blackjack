@@ -1,14 +1,17 @@
 require_relative 'card'
 
 class Deck
-
-  SUITS = %w(+ ^ <3 <>)
-  VALUES = %w(2 3 4 5 6 7 8 9 10 J Q K A)
+  SUITS = %w(+ ^ <3 <>).freeze
+  VALUES = %w(2 3 4 5 6 7 8 9 10 J Q K A).freeze
 
   attr_reader :cards
 
   def initialize
     create_deck
+  end
+
+  def issue_cards(amount)
+    @cards.shift(amount)
   end
 
   private
@@ -24,6 +27,6 @@ class Deck
   end
 
   def array_to_sym(array)
-    array.map { |value| value.to_sym  }
+    array.map(&:to_sym)
   end
 end
