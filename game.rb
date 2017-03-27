@@ -55,7 +55,7 @@ class Game
     winner = get_winner(user_score, bot_score)
     show_me_the_money(winner)
     show_user_hand(@bot)
-    puts "Победил #{winner.name}"
+    winner.nil? ? puts 'Ничья.' : puts "Победил #{winner.name}"
     menu_end_game
   end
 
