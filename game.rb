@@ -13,10 +13,10 @@ class Game
   def start_game
     create_deck
     erase_players_cards
-    issue_start_cards(@user)
-    make_bet(@user)
-    issue_start_cards(@bot)
-    make_bet(@bot)
+    [@user, @bot].each do |player|
+      issue_start_cards(player)
+      make_bet(player)
+    end
     show_user_hand(@user)
     user_turn
   end

@@ -13,7 +13,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/blackjack@deck.coverage" NAME="deck Coverage Results" MODIFIED="1490510992352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="blackjack" />
     <SUITE FILE_PATH="coverage/blackjack@game.coverage" NAME="game Coverage Results" MODIFIED="1490636760573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="blackjack" />
-    <SUITE FILE_PATH="coverage/blackjack@app.coverage" NAME="app Coverage Results" MODIFIED="1490644970666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="blackjack" />
+    <SUITE FILE_PATH="coverage/blackjack@app.coverage" NAME="app Coverage Results" MODIFIED="1490645857755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="blackjack" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -64,8 +64,8 @@
       <file leaf-file-name="game.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="116" column="17" lean-forward="false" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+            <state relative-caret-position="165">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -367,12 +367,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490459921040</updated>
-      <workItem from="1490459922336" duration="40259000" />
+      <workItem from="1490459922336" duration="41056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40259000" />
+    <option name="totallyTimeSpent" value="41056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -487,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="116" column="17" lean-forward="false" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+        <state relative-caret-position="165">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
