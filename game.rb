@@ -92,12 +92,11 @@ class Game
     if points(@bot.cards) < 17 && @bot.cards.size < max_cards
       add_card(@bot)
       puts 'Компьютер взял карту'
-      end_game if max_cards?
-      user_turn
     else
       puts 'Компьютер пропускает ход'
-      user_turn
     end
+    end_game if max_cards?
+    user_turn
   end
 
   def max_cards?
