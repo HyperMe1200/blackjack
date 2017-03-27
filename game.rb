@@ -90,8 +90,6 @@ class Game
     score > win_points
   end
 
-
-
   def bot_turn
     if points(@bot.cards) < 17 && @bot.cards.size < max_cards
       add_card(@bot)
