@@ -80,12 +80,16 @@ class Game
   end
 
   def get_winner(user_score, bot_score)
-    return @user if bot_score > win_points && user_score <= win_points
-    return @bot if user_score > win_points && bot_score <= win_points
-    return nil if user_score > win_points && bot_score > win_points
+    return nil if overscored?(user_score) && overscored?(bot_score)
+    return @user if overscored?(bot_score)
+    return @bot if overscored?(user_score)
     return @user if user_score > bot_score
     return @bot if user_score < bot_score
     nil
+  end
+
+  def overscored?(score)
+    score > win_points
   end
 
   def bot_turn
