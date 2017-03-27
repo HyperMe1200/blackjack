@@ -57,7 +57,7 @@ module Blackjack
 
   def point(card)
     return 10 if [:K, :J, :Q].include?(card.value)
-    return { min: ACE_MIN, max: ACE_MAX } if is_ace?(card)
+    return { min: ACE_MIN, max: ACE_MAX } if ace?(card)
     card.value.to_s.to_i
   end
 end
