@@ -7,26 +7,6 @@ module Blackjack
   ACE_MAX = 11
   WIN_POINTS = 21
 
-  def max_cards
-    MAX_CARDS
-  end
-
-  def bet
-    BET
-  end
-
-  def basic_card_amount
-    BASIC_CARD_AMOUNT
-  end
-
-  def basic_cash
-    BASIC_CASH
-  end
-
-  def win_points
-    WIN_POINTS
-  end
-
   def points(cards)
     points = 0
     aces = []

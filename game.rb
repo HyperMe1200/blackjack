@@ -34,7 +34,7 @@ class Game
   end
 
   def menu_add_card
-    if @user.cards.size < max_cards
+    if @user.cards.size < MAX_CARDS
       add_card(@user)
       show_user_hand(@user)
       bot_turn
@@ -85,7 +85,7 @@ class Game
   end
 
   def overscored?(score)
-    score > win_points
+    score > WIN_POINTS
   end
 
   def dead_heat?(user_score, bot_score)
@@ -95,7 +95,7 @@ class Game
   end
 
   def bot_turn
-    if points(@bot.cards) < 17 && @bot.cards.size < max_cards
+    if points(@bot.cards) < 17 && @bot.cards.size < MAX_CARDS
       add_card(@bot)
       puts 'Компьютер взял карту'
     else
@@ -106,7 +106,7 @@ class Game
   end
 
   def max_cards?
-    @user.cards.size == max_cards && @bot.cards.size == max_cards
+    @user.cards.size == MAX_CARDS && @bot.cards.size == MAX_CARDS
   end
 
   def user_input
@@ -122,7 +122,7 @@ class Game
   end
 
   def issue_start_cards(player)
-    player.cards = @deck.issue_cards(basic_card_amount)
+    player.cards = @deck.issue_cards(BASIC_CARD_AMOUNT)
   end
 
   def add_card(player)
@@ -130,9 +130,9 @@ class Game
   end
 
   def make_bet(player)
-    if player.cash - bet >= 0
-      player.cash -= bet
-      @bank += bet
+    if player.cash - BET >= 0
+      player.cash -= BET
+      @bank += BET
     else
       puts "У игрока #{player.name} закончились деньги"
       puts 'Игра завершена'
@@ -163,11 +163,11 @@ class Game
   def create_user
     printf 'Введи свое имя:'
     name = gets.chomp
-    @user = Player.new(name, basic_cash)
+    @user = Player.new(name, BASIC_CASH)
   end
 
   def create_bot
-    @bot = Player.new('Компьютер', basic_cash)
+    @bot = Player.new('Компьютер', BASIC_CASH)
   end
 
   def create_deck
