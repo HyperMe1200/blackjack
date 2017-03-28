@@ -10,17 +10,13 @@ module Blackjack
   def points(cards)
     points = 0
     aces = []
-    cards.each { |card| is_ace?(card) ? aces << card : points += point(card) }
+    cards.each { |card| card.ace? ? aces << card : points += point(card) }
     return points if aces.empty?
     points += count_aces(points, aces)
     points
   end
 
   private
-
-  def is_ace?(card)
-    card.value == :A
-  end
 
   def count_aces(points, aces)
     min = ACE_MIN
@@ -37,7 +33,7 @@ module Blackjack
 
   def point(card)
     return 10 if [:K, :J, :Q].include?(card.value)
-    return { min: ACE_MIN, max: ACE_MAX } if is_ace?(card)
+    return { min: ACE_MIN, max: ACE_MAX } if card.ace?
     card.value.to_s.to_i
   end
 end

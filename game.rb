@@ -80,6 +80,7 @@ class Game
   def get_winner(user_score, bot_score)
     return nil if dead_heat?(user_score, bot_score)
     return @bot if overscored?(user_score)
+    return @user if overscored?(bot_score)
     return @bot if user_score < bot_score
     @user
   end

@@ -9,4 +9,8 @@ class Card
   def to_s
     "#{@value}#{@suit}"
   end
+
+  def ace?
+    @value == :A
+  end
 end
